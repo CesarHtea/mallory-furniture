@@ -7,7 +7,7 @@ class ItemCard extends Component {
 		return (
 			<div>
 				<span>
-					<p className='main'> Item: {product.item} </p>
+					<p className='main'> ????Item: {product.item} </p>
 					<img className='thumb' src={product.image} alt='' />
 				</span>
 			</div>	

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-class LandingPage extends Component {
+class Home extends Component {
 	render() {
 		return (
 			<div>
-				<h1>This is LandingPage.js</h1>
+				<h1>This is Home.js</h1>
 				<div>
 					<p>(esta imagen va en el css) o el texto absoluto y centrado</p>
 					<img src='../images/landing-splash-bg.png' alt='' />
@@ -35,4 +35,4 @@ class LandingPage extends Component {
 	}
 }
 
-export default LandingPage;
+export default Home;

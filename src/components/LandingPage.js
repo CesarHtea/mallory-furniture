@@ -7,7 +7,7 @@ class LandingPage extends Component {
 				<h1>This is LandingPage.js</h1>
 				<div>
 					<p>(esta imagen va en el css) o el texto absoluto y centrado</p>
-					<img src='../images/landing-splash-bg.png' />
+					<img src='../images/landing-splash-bg.png' alt='' />
 					<h1 className='titulo'>Mallory Furniture</h1>
 					<p className='main'>Your furniture is old.</p>
 					<p className='main'>Ours is older.</p>
@@ -15,7 +15,7 @@ class LandingPage extends Component {
 				<div>
 					<h1 className='titulo'>Featured Products</h1>
 					<p className='main'>Check out some of our favorite listings</p>
-					<img src='https://mallory-furniture-static.now.sh/product-images/art-2.jpg' />
+					<img src='https://mallory-furniture-static.now.sh/product-images/art-2.jpg' alt='' />
 				</div>
 				<div>
 					<button>All Products</button>

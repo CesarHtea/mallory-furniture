@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import blackLogo from '../images/mf-logo-black.svg'
 
 class Footer extends Component {
 	render() {
@@ -6,10 +7,10 @@ class Footer extends Component {
 			<div className='grid'>
 				<h2>This is footer</h2>
 				<div>
-					<img src='../images/mf-logo-black.svg' />
+					<img src={blackLogo} alt='' />
 				</div>
 				<div>
-		        	<ul>
+		        	<ul className='grid'>
 			          	<li><i className="fa fa-shopping-cart"></i></li>
 			          	<li><i className="fa fa-instagram"></i></li>
 			          	<li><i className="fa fa-twitter"></i></li>

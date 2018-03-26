@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import whiteLogo from '../images/mf-logo-white.svg'
 
 class Header extends Component {
 	render() {
 		return (
 		  <div className='grid'>
 			<div>
-				<img src='../images/category-desks.png' />
+				<img src={whiteLogo} />
 			</div>
 			<nav>
 		        <div>

@@ -28,3 +28,8 @@ ul {
 	display: flex;
 	justify-content: space-between;
 }
+
+.thumb {
+	width: 100px;
+	height: auto;
+}

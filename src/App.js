@@ -3,28 +3,48 @@ import request from 'superagent';
 
 import './css/styles.css';
 
-import Header from './components/Header'
-import Footer from './components/Footer'
-import Container from './components/Container'
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Container from './components/Container';
+import ItemCard from './components/ItemCard';
+
 
 class App extends Component {
-  
+	constructor() {
+		super();
+
+		this.state = {
+			data: []
+		};		
+		
+		this.fetchFurniture()
+	}
+  	
 	fetchFurniture = product => {
 		request
 			.get(`https://mallory-furniture-admin.now.sh/api/v1/products`)
 			.then(response => {
-				console.log('---------------')
-				console.log(response.body)
-				console.log('---------------')	
+				// console.log(response)
+				this.setState ({
+					data: response.body	
+				})
 			})
 	}
 
 	render() {
-  		this.fetchFurniture()
-	    return (
+  		// console.log(this.state.data)
+  		// console.log(this.state.data.length)
+  		// console.log(typeof this.state.data[0])
+  		// console.log(this.state.data[0])
+  		return (
 	    	<div>
 		    	<Header />
-		    	<Container />
+		    	{/* <Container /> */}
+		    	{this.state.data.map(function(product, i){
+						return (
+							<ItemCard item={product.item} image={product.imageLink} />	
+						);
+				})}
 			    <Footer />
 			</div>
 	    );

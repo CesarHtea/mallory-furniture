@@ -20,7 +20,7 @@ class App extends Component {
 		this.fetchFurniture()
 	}
   	
-	fetchFurniture = product => {
+	fetchFurniture = () => {
 		request
 			.get(`https://mallory-furniture-admin.now.sh/api/v1/products`)
 			.then(response => {

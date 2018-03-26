@@ -5,8 +5,7 @@ import './css/styles.css';
 
 import Header from './components/Header'
 import Footer from './components/Footer'
-
-
+import Container from './components/Container'
 
 class App extends Component {
   
@@ -25,11 +24,7 @@ class App extends Component {
 	    return (
 	    	<div>
 		    	<Header />
-			      <div>
-			          <h2 className='titulo'>Front End Project:</h2>
-			          <h2>Mallory Furniture</h2>
-			          <p className='main-text'>See console</p>
-			      </div>
+		    	<Container />
 			    <Footer />
 			</div>
 	    );

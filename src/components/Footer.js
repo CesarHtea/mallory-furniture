@@ -6,11 +6,14 @@ class Footer extends Component {
 			<div className='grid'>
 				<h2>This is footer</h2>
 				<div>
+					<img src='../images/mf-logo-black.svg' />
+				</div>
+				<div>
 		        	<ul>
-			          	<li><i class="fa fa-shopping-cart"></i></li>
-			          	<li><i class="fa fa-instagram"></i></li>
-			          	<li><i class="fa fa-twitter"></i></li>
-			          	<li><i class="fa fa-pinterest"></i></li>
+			          	<li><i className="fa fa-shopping-cart"></i></li>
+			          	<li><i className="fa fa-instagram"></i></li>
+			          	<li><i className="fa fa-twitter"></i></li>
+			          	<li><i className="fa fa-pinterest"></i></li>
 		          	</ul>
 			    </div>
 			</div>  

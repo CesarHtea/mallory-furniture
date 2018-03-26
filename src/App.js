@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import request from 'superagent';
 
-import './App.css';
+import './css/styles.css';
 
 class App extends Component {
   
@@ -19,9 +19,9 @@ class App extends Component {
   		this.fetchFurniture()
 	    return (
 	      <div>
-	          <h2>Front End Project:</h2>
+	          <h2 className='titulo'>Front End Project:</h2>
 	          <h2>Mallory Furniture</h2>
-	          <h2>See console</h2>
+	          <p className='main-text'>See console</p>
 	      </div>
 	    );
 	}

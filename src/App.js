@@ -22,6 +22,16 @@ class App extends Component {
 	          <h2 className='titulo'>Front End Project:</h2>
 	          <h2>Mallory Furniture</h2>
 	          <p className='main-text'>See console</p>
+
+	          <h2 className='titulo'>Font Awesome Icons:</h2>
+
+	          <ul>
+	          	<li><i class="fa fa-shopping-cart"></i></li>
+	          	<li><i class="fa fa-instagram"></i></li>
+	          	<li><i class="fa fa-twitter"></i></li>
+	          	<li><i class="fa fa-pinterest"></i></li>
+	          </ul>
+
 	      </div>
 	    );
 	}

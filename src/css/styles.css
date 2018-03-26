@@ -14,10 +14,17 @@ ul {
     padding: 0;
 }
 
+
 .titulo {
 	font-family: 'Playfair Display', serif;	
 }
 
 .main-text {
 	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.grid {
+	border: 5px solid blue;
+	display: flex;
+	justify-content: space-between;
 }

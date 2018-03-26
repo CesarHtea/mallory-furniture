@@ -2,4 +2,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Front End Project: Mallory Furniture
 
-Step by step where committed.
+Step by step were committed.

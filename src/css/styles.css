@@ -39,6 +39,10 @@ p {
 	height: auto;
 }
 
+.landing__banner {
+	width: 400px;
+}
+
 .link {
 	text-decoration: none;
 }

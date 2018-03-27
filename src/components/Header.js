@@ -8,39 +8,17 @@ class Header extends Component {
 		return (
 			<div className='grid'>
 				<ul className='grid'>
-					<li>
-						<Link to='/'><img src={whiteLogo} alt='' /></Link>
-					</li>
-					<li>
-						<p>About</p>
-					</li>
-					<li>
-						<Link to='/terms'><p>Terms + Conditions</p></Link>
-					</li>
-					<li>
-						<p>All</p>
-					</li>
-					<li>
-						<p>Seating</p>
-					</li>
-					<li>
-						<p>Tables</p>
-					</li>
-					<li>
-						<p>Desks</p>
-					</li>
-					<li>
-						<p>Storage</p>
-					</li>
-					<li>
-						<p>Bedroom</p>
-					</li>
-					<li>
-						<p>Misc</p>
-					</li>
-					<li>
-						<i className="fa fa-shopping-cart"></i>
-					</li>
+					<li><Link to='/'><img src={whiteLogo} alt='' /></Link></li>
+					<li><p>About</p></li>
+					<li><Link to='/terms'><p>Terms + Conditions</p></Link></li>
+					<li><p>All</p></li>
+					<li><Link to='/categories/seating'><p>Seating</p></Link></li>
+					<li><Link to='/categories/tables'><p>Tables</p></Link></li>
+					<li><Link to='/categories/desks'><p>Desks</p></Link></li>
+					<li><Link to='/categories/storage'><p>Storage</p></Link></li>
+					<li><Link to='/categories/bedroom'><p>Bedroom</p></Link></li>
+					<li><Link to='/categories/miscellaneous'><p>Misc</p></Link></li>
+					<li><i className="fa fa-shopping-cart"></i></li>
 				</ul>
 			</div>
 		);

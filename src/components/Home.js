@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import landingImg from '../images/landing-splash-bg.png'
 
 class Home extends Component {
 	render() {
@@ -7,7 +8,7 @@ class Home extends Component {
 				<h1>This is Home.js</h1>
 				<div>
 					<p>(esta imagen va en el css) o el texto absoluto y centrado</p>
-					<img src='../images/landing-splash-bg.png' alt='' />
+					<img className='landing__banner' src={landingImg} alt='' />
 					<h1 className='titulo'>Mallory Furniture</h1>
 					<p className='main'>Your furniture is old.</p>
 					<p className='main'>Ours is older.</p>

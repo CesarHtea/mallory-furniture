@@ -38,7 +38,7 @@ class Furniture extends Component {
 
   // createList = () => {
   // 	let category = this.props.match.params.category
-  // 	console.log(category)
+  // 	// console.log(category)
   //   return this.state.data.filter(function(mueble) {
   //     if (mueble.category === category) return true;
   //     return console.log(mueble)

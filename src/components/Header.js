@@ -19,7 +19,7 @@ class Header extends Component {
 					<li><Link to='/categories/bedroom'><p>Bedroom</p></Link></li>
 					<li><Link to='/categories/miscellaneous'><p>Misc</p></Link></li>
 					<li><i className="fa fa-shopping-cart"></i></li>
-					<li><Link to='/products/H1-bbg-BA-'><p>Item Individual</p></Link></li>
+					<li><Link to='/products/Hklb-xZrRZ'><p>Item Individual</p></Link></li>
 				</ul>
 			</div>
 		);

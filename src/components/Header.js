@@ -11,7 +11,7 @@ class Header extends Component {
 					<li><Link to='/'><img src={whiteLogo} alt='' /></Link></li>
 					<li><p>About</p></li>
 					<li><Link to='/terms'><p>Terms + Conditions</p></Link></li>
-					<li><p>All</p></li>
+					<li><Link to='/categories/all'><p>All</p></Link></li>
 					<li><Link to='/categories/seating'><p>Seating</p></Link></li>
 					<li><Link to='/categories/tables'><p>Tables</p></Link></li>
 					<li><Link to='/categories/desks'><p>Desks</p></Link></li>

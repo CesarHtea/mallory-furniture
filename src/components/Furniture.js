@@ -28,8 +28,10 @@ class Furniture extends Component {
 
   createList = () => {
   	let category = this.props.match.params.category
-  	// console.log(category)
-    return this.state.data.filter( mueble => mueble.category === category );
+  	console.log(category)
+  	if ( category !== 'all' ) {
+      return this.state.data.filter( mueble => mueble.category === category );
+  	} return  this.state.data ;
   }
 
   // createList = () => {
@@ -37,6 +39,7 @@ class Furniture extends Component {
   // 	console.log(category)
   //   return this.state.data.filter(function(mueble) {
   //     if (mueble.category === category) return true;
+  //     return console.log(mueble)
   //   });
   // }
 

@@ -46,12 +46,25 @@ class Furniture extends Component {
   // }
 
 
+
   render() {
     const newList = this.createList();
+    const sectionTitle = this.props.match.params.category;
+    const subTitle = `All ${sectionTitle} products`;
     console.log(newList)
     return (
       <div>
-      <h2 className='title'>Products</h2>
+      	<div>
+      	  <h2 className='title'>{sectionTitle}</h2>
+      	  <p className='main'>{subTitle}</p>
+		</div>
+		<div>
+			<button>All items</button>
+			<button>On Sale</button>
+		</div>
+		<div className='items-counter'>
+		  {newList.length} items showing
+		</div>
       {newList.map(function(product,i ){
         return (
           <ItemCard item={product.item} image={product.imageLink} id={product._id}/>	

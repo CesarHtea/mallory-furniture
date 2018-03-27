@@ -46,3 +46,8 @@ p {
 .link {
 	text-decoration: none;
 }
+
+.items-counter {
+	color: yellow;
+	font-size: 20px;
+}

@@ -28,10 +28,12 @@ class Furniture extends Component {
 
   createList = () => {
   	let category = this.props.match.params.category
-  	console.log(category)
+  	// console.log(category)
   	if ( category !== 'all' ) {
       return this.state.data.filter( mueble => mueble.category === category );
-  	} return  this.state.data ;
+  	}
+  	
+  	return this.state.data ;
   }
 
   // createList = () => {
@@ -46,13 +48,13 @@ class Furniture extends Component {
 
   render() {
     const newList = this.createList();
-    // console.log(newList)
+    console.log(newList)
     return (
       <div>
-      <h2>Category</h2>
+      <h2 className='title'>Products</h2>
       {newList.map(function(product,i ){
         return (
-          <ItemCard item={product.item} image={product.imageLink} />	
+          <ItemCard item={product.item} image={product.imageLink} id={product._id}/>	
 	    );
       })}
 	  </div>

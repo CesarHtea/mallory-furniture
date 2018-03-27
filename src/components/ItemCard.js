@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
 class ItemCard extends Component {
-	render() {
+
+  render() {
 		const product = this.props
 		// console.log(product)
 		return (

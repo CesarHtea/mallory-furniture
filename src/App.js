@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 import Terms from './components/Terms';
 import Furniture from './components/Furniture';
+import IndividualItem from './components/IndividualItem'
 import NoMatch from './components/NoMatch'
 
 import './css/styles.css';
@@ -20,7 +21,6 @@ class App extends Component {
 		};		
 	
 		this.fetchFurniture()
-
 	}
   	
 	fetchFurniture = () => {
@@ -34,7 +34,6 @@ class App extends Component {
 			})
 	}
 
-
 	render() {
 		return (
 			<div>
@@ -43,6 +42,7 @@ class App extends Component {
 					<Route exact path='/' component={Home} />
 					<Route exact path='/terms' component={Terms} />
 					<Route path='/categories/:category' component={Furniture} />
+					<Route path='/products/:item' component={IndividualItem} />
 					<Route component={NoMatch} />
 				</Switch>
 	        	<Footer />

@@ -6,7 +6,7 @@ class ItemCard extends Component {
   render() {
 		const product = this.props
 		const URL = '/products/'+ product.id
-		console.log(product.id)
+		// console.log(product.id)
 		return (
 			<div>
 			  <Link to={URL}>

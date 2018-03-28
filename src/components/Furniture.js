@@ -7,9 +7,9 @@ class Furniture extends Component {
   constructor(props) {
     super();
     this.state = {
-      data: []
+      data: [],
+      filter: 'valor inicial del filter en el estado'
     };					
-    // console.log(this.state.data)
   } 
 
   componentDidMount() {
@@ -22,17 +22,33 @@ class Furniture extends Component {
       });
   }
 
-  	// filtro segun url
-  	// retorna una lista 
-  	// lista.map
+  seteandoStateAValorInicial() {
+    this.setState({
+      filter: 'valor inicial del filter en el estado'
+    })  
+  }
 
+  botonAll = () => {
+    this.setState({ 
+        filter: 'apretando boton All' 
+      }) 
+  }
+
+  botonOnSale = () => {
+   this.setState({ 
+        filter: true 
+      }) 
+  }
+
+// funcion que crea una lista filtrada por categorias
+    // filtro segun url
+    // retorna una lista 
+    // lista.map
   createList = () => {
   	let category = this.props.match.params.category
-  	// console.log(category)
   	if ( category !== 'all' ) {
       return this.state.data.filter( mueble => mueble.category === category );
   	}
-  	
   	return this.state.data ;
   }
 
@@ -45,13 +61,29 @@ class Furniture extends Component {
   //   });
   // }
 
+// funcion que filtra la lista filtrada por categorias, si el estado 'on Sale'
 
+  createListFiltered = () => {
+    let filter = this.state.filter
+    if ( filter === true ) {
+      return this.createList().filter( muebleOnSale => muebleOnSale.onSale === filter );
+    }
+    return this.createList() ;
+  }
 
   render() {
-    const newList = this.createList();
-    const sectionTitle = this.props.match.params.category;
+  	const sectionTitle = this.props.match.params.category;
     const subTitle = `All ${sectionTitle} products`;
-    console.log(newList)
+    // const newList = this.createList()
+    const newListFiltered = this.createListFiltered()
+    console.log('---------------')
+    console.log(this.state.data) 
+    console.log(this.state.filter)
+    console.log(newListFiltered)
+    console.log('---------------') 
+    // console.log('---------')
+    // console.log(newList)
+    // console.log('---------')
     return (
       <div>
       	<div>
@@ -59,13 +91,13 @@ class Furniture extends Component {
       	  <p className='main'>{subTitle}</p>
 		</div>
 		<div>
-			<button>All items</button>
-			<button>On Sale</button>
+			<button onClick={ () => { this.botonAll() } }>All items</button>
+			<button onClick={ () => { this.botonOnSale() } }>On Sale</button>
 		</div>
 		<div className='items-counter'>
-		  {newList.length} items showing
+		  {newListFiltered.length} items showing
 		</div>
-      {newList.map(function(product,i ){
+      {newListFiltered.map(function(product){
         return (
           <ItemCard item={product.item} image={product.imageLink} id={product._id}/>	
 	    );

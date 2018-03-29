@@ -8,11 +8,11 @@ class Furniture extends Component {
     super();
     this.state = {
       data: [],
-      filter: 'valor inicial del filter en el estado'
-    };					
+      filter: 'valor inicial del filter en el estado', 
+    };
   } 
 
-  componentDidMount() {
+  componentDidMount() {   
     request
       .get(`https://mallory-furniture-admin.now.sh/api/v1/products`)
       .then(response => {
@@ -20,12 +20,6 @@ class Furniture extends Component {
           data: response.body
         })
       });
-  }
-
-  seteandoStateAValorInicial() {
-    this.setState({
-      filter: 'valor inicial del filter en el estado'
-    })  
   }
 
   botonAll = () => {
@@ -80,6 +74,7 @@ class Furniture extends Component {
     console.log(this.state.data) 
     console.log(this.state.filter)
     console.log(newListFiltered)
+    console.log(this.state.categoriaActual)
     console.log('---------------') 
     // console.log('---------')
     // console.log(newList)

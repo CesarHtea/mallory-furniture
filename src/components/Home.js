@@ -41,12 +41,17 @@ class Home extends Component {
 				  </div>
 				</div>
 				<div>
-					<h1 className='titulo'>Featured Products</h1>
-					<p className='main'>Check out some of our favorite listings</p>
+					<h1 className='encabezado'>Featured Products</h1>
+					<p className='sub-encabezado'>Check out some of our favorite listings</p>
 					<div className='cards-container'>                    
                       {newList.map(function(product){
                         return (
-                          <ItemCard item={product.item} image={product.imageLink} id={product._id}/>	
+                          <ItemCard 
+                            item={product.item} 
+                            image={product.imageLink} 
+                            id={product._id}
+                            price={product.price}
+                          />	
                         );
                       })}
                     </div>

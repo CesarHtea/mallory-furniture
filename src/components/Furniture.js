@@ -85,7 +85,12 @@ class Furniture extends Component {
           <div className='cards-container'>
             {newListFiltered.map(function(product){
               return (
-                <ItemCard item={product.item} image={product.imageLink} id={product._id}/>	
+                <ItemCard 
+                  item={product.item} 
+                  image={product.imageLink} 
+                  id={product._id}
+                  price={product.price}
+                />	
 	            );
             })}
           </div>

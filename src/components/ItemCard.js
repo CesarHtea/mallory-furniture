@@ -8,10 +8,11 @@ class ItemCard extends Component {
     // console.log(product.id)
     return (
       <div className='card'>
-        <Link to={URL}>
+        <Link className='item-name' to={URL}>
           
             <img className='thumb' src={product.image} alt='' />
-            <p>Item: {product.item} </p>
+            <p className='item-name'>{product.item} </p>
+            <p className='price'>${product.price} </p>
           
         </Link>
       </div>	

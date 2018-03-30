@@ -46,7 +46,7 @@ li {
   border: none;
   padding: 0;
   margin: 0;
-  background: yellow;
+  background: #FFC107;
   width: 40px;
   height: 50px;
   display: flex;
@@ -99,7 +99,6 @@ li {
 
 .fa {
 	align-self: center;
-	background-color: yellow;
 }
 
 .encabezado {
@@ -141,4 +140,54 @@ li {
 .price {
   margin: 0;
   color: #999999;
+}
+
+.individual-item-container {
+  display: flex;
+}
+
+.individual-item-image-container {
+  max-width: 440px;
+}
+
+.individual-item-image {
+  width: 100%;
+}
+
+.item-general-info {
+  margin: 10px;
+  padding: 10px;
+  max-width: 300px;
+  height: 190px;
+  border: 1px solid #999999;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2), 0px 1px 2px rgba(0, 0, 0, 0.19);
+}
+
+.individual-item-price {
+  text-align: right;
+}
+
+.item-details {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-details-font {
+  font-size: 9px;
+  margin: 0;
+  color: #999999;
+}
+
+.item-details-font-decoration {
+  text-decoration: underline;
+}
+
+.add-to-cart-button {
+  background-color: #F44336;
+  color: white;
+  border: none;
+  width: 90px;
+  height: 30px;
+  border-radius: 20px;
 }

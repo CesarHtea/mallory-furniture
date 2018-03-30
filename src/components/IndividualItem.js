@@ -23,16 +23,27 @@ class IndividualItem extends Component {
 
   render() {
 	  const infoItem = this.state.data
-	  console.log(infoItem)
 	  return (
-		  <div>
-			  <span>
-				  <p className='main'>Item: {infoItem.item}</p>
-          <p className='main'>Price: {infoItem.price} </p>
-          <img className='thumb' src={infoItem.imageLink} alt='' />
-          <p className='main'>Condition: {infoItem.condition}</p>
-          <p className='main'>Measurements: W: {infoItem.width} L: {infoItem.length} H: {infoItem.height} </p>
-				</span>
+		  <div className='individual-item-container'>
+        <div className='individual-item-image-container'>
+          <img className='individual-item-image' src={infoItem.imageLink} alt='' />
+        </div>
+			  <div className='item-general-info'>
+				  <p>{infoItem.item}</p>
+          <p className='individual-item-price main'>${infoItem.price} </p>
+          <hr />
+          <div className='item-details'>
+            <div>
+              <p className='item-details-font item-details-font-decoration'>Condition:</p> 
+              <p className='item-details-font'>{infoItem.condition}</p>
+            </div>
+            <div>
+              <p className='item-details-font item-details-font-decoration'>Measurements:</p>
+              <p className='item-details-font'> W: {infoItem.width} L: {infoItem.length} H: {infoItem.height} </p>
+            </div>
+            <button className='item-details-font add-to-cart-button'>Add to Cart</button>
+          </div>
+				</div>
 			</div>	
 		)
 	}

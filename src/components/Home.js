@@ -43,12 +43,13 @@ class Home extends Component {
 				<div>
 					<h1 className='titulo'>Featured Products</h1>
 					<p className='main'>Check out some of our favorite listings</p>
-
-                    {newList.map(function(product){
-                      return (
-                        <ItemCard item={product.item} image={product.imageLink} id={product._id}/>	
-                      );
-                    })}
+					<div className='cards-container'>                    
+                      {newList.map(function(product){
+                        return (
+                          <ItemCard item={product.item} image={product.imageLink} id={product._id}/>	
+                        );
+                      })}
+                    </div>
 				</div>
 				<div>
 					<button>All Products</button>

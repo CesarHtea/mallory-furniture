@@ -93,7 +93,7 @@ li {
 }
 
 .thumb {
-	width: 100px;
+	width: 100%;
 	height: auto;
 }
 
@@ -103,7 +103,23 @@ li {
 
 .fa {
 	align-self: center;
-}
-.fa {
 	background-color: yellow;
 }
+
+.cards-container {
+  display: inline-flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid green;
+  width: 250px;
+}
+
+.item-name {
+  text-decoration: none;
+}
+

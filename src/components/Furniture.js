@@ -68,36 +68,28 @@ class Furniture extends Component {
   render() {
   	const sectionTitle = this.props.match.params.category;
     const subTitle = `All ${sectionTitle} products`;
-    // const newList = this.createList()
     const newListFiltered = this.createListFiltered()
-    console.log('---------------')
-    console.log(this.state.data) 
-    console.log(this.state.filter)
-    console.log(newListFiltered)
-    console.log(this.state.categoriaActual)
-    console.log('---------------') 
-    // console.log('---------')
-    // console.log(newList)
-    // console.log('---------')
     return (
       <div>
       	<div>
       	  <h2 className='title'>{sectionTitle}</h2>
       	  <p className='main'>{subTitle}</p>
-		</div>
-		<div>
-			<button onClick={ () => { this.botonAll() } }>All items</button>
-			<button onClick={ () => { this.botonOnSale() } }>On Sale</button>
-		</div>
-		<div className='items-counter'>
-		  {newListFiltered.length} items showing
-		</div>
-      {newListFiltered.map(function(product){
-        return (
-          <ItemCard item={product.item} image={product.imageLink} id={product._id}/>	
-	    );
-      })}
-	  </div>
+		    </div>
+		    <div>
+			    <button onClick={ () => { this.botonAll() } }>All items</button>
+			    <button onClick={ () => { this.botonOnSale() } }>On Sale</button>
+		    </div>
+		    <div className='items-counter'>
+		      {newListFiltered.length} items showing
+		    </div>
+          <div className='cards-container'>
+            {newListFiltered.map(function(product){
+              return (
+                <ItemCard item={product.item} image={product.imageLink} id={product._id}/>	
+	            );
+            })}
+          </div>
+      </div>
     );
   }
 

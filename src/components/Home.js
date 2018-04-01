@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import request from 'superagent';
 
 import landingImg from '../images/landing-splash-bg.png'
@@ -57,18 +58,18 @@ class Home extends Component {
                     </div>
 				</div>
 				<div className='button-container'>
-					<button className='square-red-button'>All Products</button>
+					<Link className='square-red-button' to='/categories/all'>All Products</Link>
 				</div>
 				<div>
 					<h1 className='encabezado'>Browse by Categories</h1>
 					<p className='sub-encabezado'>Explore by furniture type</p>
 					<div className='button-container'>
-            <button className='square-blue-button'>Seating</button>
-					  <button className='square-blue-button'>Tables</button>
-					  <button className='square-blue-button'>Desks</button>
-					  <button className='square-blue-button'>Bedroom</button>
-					  <button className='square-blue-button'>Storage</button>
-					  <button className='square-blue-button'>Misc</button>
+            <Link className='square-blue-button' to='/categories/seating'>Seating</Link>
+					  <Link className='square-blue-button' to='/categories/tables'>Tables</Link>
+					  <Link className='square-blue-button' to='/categories/desks'>Desks</Link>
+					  <Link className='square-blue-button' to='/categories/bedroom'>Bedroom</Link>
+					  <Link className='square-blue-button' to='/categories/storage'>Storage</Link>
+					  <Link className='square-blue-button' to='/categories/miscellaneous'>Misc</Link>
            </div>
 				</div>
 			</div>

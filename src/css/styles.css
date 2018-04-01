@@ -91,6 +91,14 @@ li {
   margin-bottom: 15px;
 }
 
+.terms-and-conditions {
+  max-width: 570px;
+  margin: 0 auto;
+}
+
+.terms-and-conditions-text {
+  font-size: 10px;
+}
 
 .cards-container {
   display: inline-flex;
@@ -285,3 +293,4 @@ li {
   text-decoration: none;
   color: black;
 }
+

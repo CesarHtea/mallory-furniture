@@ -56,18 +56,20 @@ class Home extends Component {
                       })}
                     </div>
 				</div>
-				<div>
-					<button>All Products</button>
+				<div className='button-container'>
+					<button className='square-red-button'>All Products</button>
 				</div>
 				<div>
-					<h1 className='titulo'>Browse by Categories</h1>
-					<p className='main'>Explore by furniture type</p>
-					<button>Seating</button>
-					<button>Tables</button>
-					<button>Desks</button>
-					<button>Bedroom</button>
-					<button>Storage</button>
-					<button>Misc</button>
+					<h1 className='encabezado'>Browse by Categories</h1>
+					<p className='sub-encabezado'>Explore by furniture type</p>
+					<div className='button-container'>
+            <button className='square-blue-button'>Seating</button>
+					  <button className='square-blue-button'>Tables</button>
+					  <button className='square-blue-button'>Desks</button>
+					  <button className='square-blue-button'>Bedroom</button>
+					  <button className='square-blue-button'>Storage</button>
+					  <button className='square-blue-button'>Misc</button>
+           </div>
 				</div>
 			</div>
 		);

@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import request from 'superagent';
 import ItemCard from './ItemCard';
 
+
 class Furniture extends Component {
 
   constructor(props) {
     super();
     this.state = {
       data: [],
-      filter: 'valor inicial del filter en el estado', 
+      filter: '', 
     };
   } 
 
@@ -24,7 +25,7 @@ class Furniture extends Component {
 
   botonAll = () => {
     this.setState({ 
-        filter: 'apretando boton All' 
+        filter: '' 
       }) 
   }
 
@@ -65,22 +66,29 @@ class Furniture extends Component {
     return this.createList() ;
   }
 
+  capitalize(s) { return s[0].toUpperCase() + s.slice(1) }
+
   render() {
   	const sectionTitle = this.props.match.params.category;
-    const subTitle = `All ${sectionTitle} products`;
+    const subTitle = `${sectionTitle} products`;
     const newListFiltered = this.createListFiltered()
     return (
       <div>
       	<div>
-      	  <h2 className='title'>{sectionTitle}</h2>
-      	  <p className='main'>{subTitle}</p>
+      	  <h2 className='encabezado'>{ this.capitalize(sectionTitle) }</h2>
+      	  <p className='sub-encabezado'>{ this.capitalize(subTitle) }</p>
 		    </div>
-		    <div>
-			    <button onClick={ () => { this.botonAll() } }>All items</button>
-			    <button onClick={ () => { this.botonOnSale() } }>On Sale</button>
+		    <div className='button-container-align-left'>
+			    <button className='square-red-button' onClick={ () => { this.botonAll() } }>All items</button>
+			    <button className='square-grey-button' onClick={ () => { this.botonOnSale() } }>On Sale</button>
 		    </div>
 		    <div className='items-counter'>
-		      {newListFiltered.length} items showing
+          <div className='items-counter-number'>
+		      {newListFiltered.length}
+          </div>
+          <div> 
+            <p className='items-counter-text'>items showing</p>
+          </div>
 		    </div>
           <div className='cards-container'>
             {newListFiltered.map(function(product){

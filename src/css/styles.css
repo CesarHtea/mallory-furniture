@@ -73,10 +73,6 @@ li {
 	height: auto;
 }
 
-.items-counter {
-	font-size: 20px;
-}
-
 .fa {
 	align-self: center;
 }
@@ -201,12 +197,19 @@ li {
   margin: 0 auto;
 }
 
+.button-container-align-left {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 40px;
+}
+
 .square-red-button {
   font-size: 12px;
   color: #F44336;
   border: 1px solid #F44336;
   background-color: transparent;
   padding: 10px 30px;
+  margin: 20px;
 }
 
 .square-grey-button {
@@ -215,6 +218,7 @@ li {
   border: 1px solid #999999;
   background-color: transparent;
   padding: 10px 30px;
+  margin: 20px;
 }
 
 .square-blue-button {
@@ -224,6 +228,26 @@ li {
   background-color: transparent;
   padding: 10px 30px;
   margin: 20px;
+}
+
+.items-counter {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 12px;
+  margin-bottom: 15px;
+  margin-right: 60px;
+}
+
+.items-counter-number {
+ margin-right: 10px;
+ font-size: 20px;
+ color: #FFC107; 
+ vertical-align: middle;
+}
+
+.items-counter-text {
+  vertical-align: middle;
+  margin-top: 5px;
 }
 
 

@@ -10,7 +10,7 @@ class Header extends Component {
 			<div className='header grid'>
 			  <ul className='grid'>
 			    <li><Link to='/'><img className='logo-superior' src={whiteLogo} alt='' /></Link></li>
-			    <li><p className='menu-superior-botones'>About</p></li>
+			    <li><Link to='/' className='menu-superior-botones'>About</Link></li>
 			    <li><Link className='menu-superior-botones' to='/terms'>Terms + Conditions</Link></li>
 			    <li><Link className='menu-superior-botones' to=''>|</Link></li>
 			    <li><Link className='menu-superior-botones' to='/categories/all'>All</Link></li>

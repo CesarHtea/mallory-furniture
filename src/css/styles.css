@@ -280,3 +280,8 @@ li {
 .footer-section-title {
   color: #F44336;
 }
+
+.footer-link-decoration {
+  text-decoration: none;
+  color: black;
+}

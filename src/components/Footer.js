@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import blackLogo from '../images/mf-logo-black.svg'
 
 class Footer extends Component {
@@ -14,17 +15,17 @@ class Footer extends Component {
         <div className='footer-horizontal'>
           <div>
             <p className='footer-section-title'>Company</p>
-            <p>About</p>
-            <p>Terms + Conditions</p>
+            <Link className='footer-link-decoration' to='/' ><p>About</p></Link>
+            <Link className='footer-link-decoration' to='/terms'><p>Terms + Conditions</p></Link>
           </div>
           <div>
             <p className='footer-section-title'>Categories</p>
-            <p>Seating</p>
-            <p>Tables</p>
-            <p>Desks</p>
-            <p>Storage</p>
-            <p>Bedroom</p>
-            <p>Misc</p>
+            <Link className='footer-link-decoration' to='/categories/seating'><p>Seating</p></Link>
+            <Link className='footer-link-decoration' to='/categories/tables'><p>Tables</p></Link>
+            <Link className='footer-link-decoration' to='/categories/desks'><p>Desks</p></Link>
+            <Link className='footer-link-decoration' to='/categories/storage'><p>Storage</p></Link>
+            <Link className='footer-link-decoration' to='/categories/bedroom'><p>Bedroom</p></Link>
+            <Link className='footer-link-decoration' to='/categories/miscellaneous'><p>Misc</p></Link>
           </div>
           <div>
             <p className='footer-section-title'>Social</p>
